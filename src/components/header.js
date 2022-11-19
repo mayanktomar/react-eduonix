@@ -10,7 +10,7 @@ export default function Header() {
           dark
         >
       <NavbarBrand href="/">
-        My website
+        Restro
       </NavbarBrand>
     </Navbar>
     </>

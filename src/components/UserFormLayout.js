@@ -13,7 +13,7 @@ export class UserFormLayout extends Component {
       output:{}
     }
   }
-
+  
   storeDetails = (event) => {
     let name = event.target.name;  //email
     let value = event.target.value; //m@gmail.com

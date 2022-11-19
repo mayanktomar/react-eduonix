@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
 
 export default function UserForm(props) {
+
+  const [name,setName] = useState('');
+  const [email,setEmail] = useState('');
+  useEffect(() => {
+    console.log("Hello");
+  },[name])
+  
+
   return (
     <>
-    <Form>
+    <Form >
     <FormGroup>
         <Label for="exampleName">
           Name

@@ -4,6 +4,7 @@ import Header from './components/header';
 import Gallery from './components/gallery';
 import UserForm from './components/UserForm';
 import UserFormLayout from './components/UserFormLayout';
+import Home from './components/Home';
 
 function App() {
   var name = "Asif";
@@ -11,9 +12,8 @@ function App() {
   return (
   <>       
     <Header/>
-    <Gallery/>
+    <Home/>
     <hr></hr>
-    <UserFormLayout/>
   </>
    
   );

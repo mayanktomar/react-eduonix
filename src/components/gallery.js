@@ -9,23 +9,6 @@ export default class Gallery extends Component {
     }
   }
 
-  increment() {
-    this.setState({number:this.state.number+1});
-    console.log(this.state.number);
-  }
-
-  static getDerivedStateFromProps() {
-    console.log("get props of Gallery called");
-  }
-  componentDidMount()
-  {
-    console.log("Comp did mount of Gallery called");
-  }
-
-  componentDidUpdate() {
-    console.log("Comp did update of Gallery called");
-  }
-
   render() {
     console.log("render of Gallery called");
     return (
