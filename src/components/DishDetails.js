@@ -1,8 +1,20 @@
+import { buildQueries } from '@testing-library/react';
 import React from 'react';
 import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button} from 'reactstrap';
 import { dishDetails } from '../dishDetails';
 
 export default function DishDetails() {
+
+  const styling = {
+    heading : {
+      color:'red',
+    backgroundColor:'blue'
+    },
+    paragraph: {
+      color:'grey'
+    }
+  }
+
   
   const displayDetails = () => {
     return(
@@ -42,7 +54,8 @@ export default function DishDetails() {
   return (
     <>
       <div className='row'>
-        <h2>Dish Details</h2>
+        <h2 style={styling.heading}>Dish Details</h2>
+        <p style={styling.paragraph}>Here are details of our popluar dishes</p>
         {displayDetails()}
       </div>
     </>

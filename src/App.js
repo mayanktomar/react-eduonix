@@ -5,16 +5,23 @@ import Gallery from './components/gallery';
 import UserForm from './components/UserForm';
 import UserFormLayout from './components/UserFormLayout';
 import Home from './components/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   var name = "Asif";
   var course = "Web development";
   return (
-  <>       
-    <Header/>
-    <Home/>
-    <hr></hr>
-  </>
+    <Router>
+       <div>
+          <Header/>
+          <Routes>
+          <Route exact path="/" element={<Home/>}/>
+            <Route path="/form" element={<UserFormLayout/>}/>
+          </Routes>
+          {/* <Home/>
+          <hr></hr> */}
+        </div>   
+    </Router>
    
   );
 }
