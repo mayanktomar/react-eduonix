@@ -1,31 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/header';
-import Gallery from './components/gallery';
-import UserForm from './components/UserForm';
-import UserFormLayout from './components/UserFormLayout';
-import Home from './components/Home';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/header";
+import Gallery from "./components/gallery";
+import UserForm from "./components/UserForm";
+import UserFormLayout from "./components/UserFormLayout";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SearchComponent from "./components/SearchComponent";
 
 function App() {
   var name = "Asif";
   var course = "Web development";
   return (
     <Router>
-       <div>
-          <Header/>
-          <Routes>
-          <Route exact path="/" element={<Home/>}/>
-            <Route path="/form" element={<UserFormLayout/>}/>
-          </Routes>
-          {/* <Home/>
+      <div>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/form" element={<UserFormLayout />} />
+          <Route path="/search" element={<SearchComponent />} />
+        </Routes>
+        {/* <Home/>
           <hr></hr> */}
-        </div>   
+      </div>
     </Router>
-   
   );
 }
 
 export default App;
-
-
