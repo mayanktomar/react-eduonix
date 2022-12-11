@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component } from 'react'
 import DisplayDetails from './DisplayDetails'
 import UserForm from './UserForm'
@@ -14,6 +15,16 @@ export class UserFormLayout extends Component {
     }
   }
   
+  componentDidMount () {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then((res)=>res.json())
+    .then((json)=>{
+      console.log(json);
+    })
+    .catch(()=>console.log("Error occured while calling the api"))
+  }
+
+
   storeDetails = (event) => {
     let name = event.target.name;  //email
     let value = event.target.value; //m@gmail.com
@@ -21,14 +32,28 @@ export class UserFormLayout extends Component {
   }
 
   submitForm = () => {
-    this.setState({output:
+    axios.post('/feedback',
     {
       name:this.state.name,
       email:this.state.email,
       password:this.state.password,
       message:this.state.message
-    }
-  })
+    })
+    .then((response)=>{
+      alert("Feedback data saved successfully");
+      this.setState({output:
+        {
+          name:this.state.name,
+          email:this.state.email,
+          password:this.state.password,
+          message:this.state.message
+        }
+      })
+    })
+    .catch((error)=>{
+      alert("Failed to save the feedback");
+    })
+   
   }
   render() {
     return (
@@ -50,3 +75,24 @@ export class UserFormLayout extends Component {
 }
 
 export default UserFormLayout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

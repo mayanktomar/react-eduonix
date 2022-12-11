@@ -16,10 +16,10 @@ export default function Home() {
   const [sideImageCount,setSideImageCount] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      setSideImage(images[sideImageCount]);
-      setSideImageCount((sideImageCount+1)%3);
-    }, 3000);
+    // setTimeout(() => {
+    //   setSideImage(images[sideImageCount]);
+    //   setSideImageCount((sideImageCount+1)%3);
+    // }, 3000);
   })
   
   return (

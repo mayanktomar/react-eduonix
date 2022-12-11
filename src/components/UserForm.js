@@ -1,15 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
 
 export default function UserForm(props) {
 
   const [name,setName] = useState('');
   const [email,setEmail] = useState('');
-  useEffect(() => {
-    console.log("Hello");
-  },[name])
-  
+  const count = useRef(0)
 
+  useEffect(() => {
+    count.current = count.current + 1;
+  })
+   
   return (
     <>
     <Form >

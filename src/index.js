@@ -7,8 +7,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createStore } from 'redux';
 import allReducers from './reducers';
 import { Provider } from 'react-redux';
-
+import axios from 'axios';
+import { apiUrl } from './config';
 const myStore = createStore(allReducers);
+
+
+
+axios.defaults.baseURL = apiUrl;
+
+axios.interceptors.request.use(request => {
+    // Edit request config
+    return request;
+}, error => {
+    console.log(error);
+    return Promise.reject(error);
+});
+
+axios.interceptors.response.use(response => {
+    // Edit response config
+    return response;
+}, error => {
+    console.log(error);
+    return Promise.reject(error);
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
