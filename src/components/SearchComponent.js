@@ -4,6 +4,10 @@ import { dishDetails } from "../dishDetails";
 import { Button } from "reactstrap";
 
 export default function SearchComponent() {
+  const style = {
+    justifyContent: "center",
+  };
+
   const [searchIerm, setSearchIerm] = useState("");
 
   const filteredResult = dishDetails.filter((val) => {
@@ -36,10 +40,13 @@ export default function SearchComponent() {
           />
         </form>
 
-        <div className="container row my-4">
+        <div className="container row my-4  align-items-center justify-content-center ">
           {filteredResult.map((val) => {
             return (
-              <div className="col-md-4 my-3" key={val.title}>
+              <div
+                className="col-md-4 my-3 align-items-center justify-content-center"
+                key={val.title}
+              >
                 <Card
                   style={{
                     width: "18rem",
