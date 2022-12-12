@@ -4,10 +4,6 @@ import { dishDetails } from "../dishDetails";
 import { Button } from "reactstrap";
 
 export default function SearchComponent() {
-  const style = {
-    justifyContent: "center",
-  };
-
   const [searchIerm, setSearchIerm] = useState("");
 
   const filteredResult = dishDetails.filter((val) => {
