@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 import { dishDetails } from "../dishDetails";
 import { Button } from "reactstrap";
 
 export default function SearchComponent() {
   const [searchIerm, setSearchIerm] = useState("");
+  // const [dishes, setDishes] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:5000/dishes")
+  //     .then((res) => {
+  //       setDishes(res.data);
+  //     })
+
+  //     .catch(() => {
+  //       console.log("No data found");
+  //     });
+  // }, []);
 
   const filteredResult = dishDetails.filter((val) => {
     // console.log(val);
@@ -17,10 +29,6 @@ export default function SearchComponent() {
       return val;
     }
   });
-
-  // useEffect(() => {
-  //   filteredResult();
-  // }, [searchIerm]);
 
   return (
     <>
