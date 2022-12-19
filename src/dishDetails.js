@@ -16,5 +16,11 @@ export const dishDetails = [
     description: 'Cake description text',
     imageSrc: 'https://picsum.photos/300/200',
     url:'www.twitter.com'
+  },
+  {
+    title:'Roti',
+    description: 'Roti description text',
+    imageSrc: 'https://picsum.photos/300/200',
+    url:'www.twitter.com'
   }
 ]
