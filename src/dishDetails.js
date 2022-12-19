@@ -12,7 +12,7 @@ export const dishDetails = [
     url:'www.facebook.com'
   },
   {
-    title:'Cake',
+    title:'Roti',
     description: 'Cake description text',
     imageSrc: 'https://picsum.photos/300/200',
     url:'www.twitter.com'
