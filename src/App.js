@@ -6,6 +6,7 @@ import UserForm from './components/UserForm';
 import UserFormLayout from './components/UserFormLayout';
 import Home from './components/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Search from './components/Search';
 
 function App() {
   var name = "Asif";
@@ -17,6 +18,7 @@ function App() {
           <Routes>
           <Route exact path="/" element={<Home/>}/>
             <Route path="/form" element={<UserFormLayout/>}/>
+            <Route path="/search" element={<Search/>}/>
           </Routes>
           {/* <Home/>
           <hr></hr> */}
