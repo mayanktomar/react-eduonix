@@ -12,7 +12,7 @@ export default function Header() {
        className="my-2"
        color="dark"
        dark>
-        <NavbarBrand href="/">Restro</NavbarBrand>
+        <NavbarBrand href="/">RestroYogi</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
