@@ -1,9 +1,14 @@
 import react, {useState} from 'react';
-import {Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink} from 'reactstrap';
+import {Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink,Button} from 'reactstrap';
 import { Link } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  let nevigate=()=>{
+    navigate('/search')
+  }
 
   const toggle = () => setIsOpen(!isOpen);
   return (
@@ -12,7 +17,8 @@ export default function Header() {
        className="my-2"
        color="dark"
        dark>
-        <NavbarBrand href="/">RestroYogi</NavbarBrand>
+        <NavbarBrand href="/">Restro</NavbarBrand>
+        <Button className="ms-auto" onClick={nevigate}>Search</Button>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
