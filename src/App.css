@@ -2,3 +2,9 @@
   background-color: red;
   color: blue;
 }
+.btn-secondary {
+  margin-right: 30px;
+}
+.searchdish{
+  size:"sm";
+}
